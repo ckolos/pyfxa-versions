@@ -1,4 +1,4 @@
-* pyfxa-versions
+# pyfxa-versions
 
 Simple script to query the __version__ endpoint on all the fxa porperties for a given env
 
@@ -25,7 +25,21 @@ https://eventbroker-stage.fxa.nonprod.cloudops.mozgcp.net/__version__
 
 The script takes the following arguments:
 
- `-c / --config - Full path to configuration file (json)`
- `-e / --env    - Which env to check (dev/stage/prod/thingie/etc)`
+```
+ -c / --config - Full path to configuration file (json)
+ -e / --env    - Which env to check (dev/stage/prod/thingie/etc)
+```
 
-
+Sample config:
+```
+{
+  "dev": [
+    "site1.madeup.com",
+    "site2.madeup.com"
+  ],
+  "stage": [
+    "site1.mightbereal.fail",
+    "site2.mightbereal.fail"
+  ],
+}
+```

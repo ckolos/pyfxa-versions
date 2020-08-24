@@ -1,0 +1,38 @@
+{
+  "prod": [
+    "accounts.firefox.com",
+    "api.accounts.firefox.com",
+    "oauth.accounts.firefox.com",
+    "profile.accounts.firefox.com",
+    "subscriptions.firefox.com",
+    "eventbroker-prod.fxa.prod.cloudops.mozgcp.net"
+  ],
+  "stage": [
+    "accounts.stage.mozaws.net",
+    "api-accounts.stage.mozaws.net",
+    "oauth.stage.mozaws.net",
+    "profile.stage.mozaws.net",
+    "payments-stage.fxa.nonprod.cloudops.mozgcp.net",
+    "eventbroker-stage.fxa.nonprod.cloudops.mozgcp.net"
+  ],
+  "nightly": [
+    "nightly.dev.lcip.org",
+    "nightly-auth.dev.lcip.org",
+    "nightly-oauth.dev.lcip.org",
+    "nightly-profile.dev.lcip.org",
+    "payments-dev.fxa.nonprod.cloudops.mozgcp.net",
+    "eventbroker-dev.fxa.nonprod.cloudops.mozgcp.net"
+  ],
+  "latest": [
+    "latest.dev.lcip.org",
+    "latest.dev.lcip.org/auth",
+    "oauth-latest.dev.lcip.org",
+    "latest.dev.lcip.org/profile"
+  ],
+  "stable": [
+    "stable.dev.lcip.org",
+    "stable.dev.lcip.org/auth",
+    "oauth-stable.dev.lcip.org",
+    "stable.dev.lcip.org/profile"
+  ]
+}

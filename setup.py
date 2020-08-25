@@ -22,7 +22,6 @@ setup(
             "pyfxa-versions = pyfxa_versions:main",
         ]
     },
-    include_package_data=True,
     install_requires=[
         'requests<3.0.0',
         'click<8.0.0'
@@ -32,9 +31,8 @@ setup(
     packages=find_packages(),
     package_data={
         "": ["*.txt"],
-        "pyfxa-versions": ["data/py-fxa-versions.json"],
+        "pyfxa_versions": ["data/pyfxa-versions.json"],
     },
-    package_dir={"pyfxa-versions": "pyfxa_versions"},
-    url='https://github.com/ckolos/py-fxa-versions',
+    url='https://github.com/ckolos/pyfxa-versions',
     version='1.0.0',
 )

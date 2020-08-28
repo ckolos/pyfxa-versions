@@ -1,3 +1,4 @@
 build
 dist
 .mypy_cache
+pyfxa_versions.egg-info

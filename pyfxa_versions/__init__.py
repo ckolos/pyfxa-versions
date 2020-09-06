@@ -55,7 +55,7 @@ def get_info(site):
 @click.command()
 @click.option('-c',
               '--config',
-              default=f'{pkg_resources.resource_string(__name__, "data/pyfxa-versions.json")}',
+              default=f'{pkg_resources.resource_filename(__name__, "data/pyfxa-versions.json")}',
               help="The full path to the script's config file", required=False)
 @click.option('-e', '--env', default='stage', help="The env to be checked", required=False)
 def main(config, env):

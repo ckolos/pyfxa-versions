@@ -22,6 +22,7 @@ setup(
             "pyfxa-versions = pyfxa_versions:main",
         ]
     },
+    include_package_data=True,
     install_requires=[
         'requests<3.0.0',
         'click<8.0.0'

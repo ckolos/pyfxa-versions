@@ -38,13 +38,13 @@ def get_info(site):
     try:
         info = requests.get(this_site)
     except requests.ConnectionError as exc:
-        raise click.ClickException(f'Unable to connect to {site}: {exc}')
+        raise click.ClickException(f"Unable to connect to {site}: {exc}")
     except requests.HTTPError as exc:
-        raise click.ClickException(f'HTTPError: {exc}')
+        raise click.ClickException(f"HTTPError: {exc}")
     except requests.Timeout as exc:
-        raise click.ClickException(f'Timeout: {exc}')
+        raise click.ClickException(f"Timeout: {exc}")
     except requests.TooManyRedirects as exc:
-        raise click.ClickException(f'Too many redirects encountered: {exc}')
+        raise click.ClickException(f"Too many redirects encountered: {exc}")
 
     if info.status_code == 200:
         return info.json
@@ -53,11 +53,16 @@ def get_info(site):
 
 
 @click.command()
-@click.option('-c',
-              '--config',
-              default=f'{pkg_resources.resource_filename(__name__, "data/pyfxa-versions.json")}',
-              help="The full path to the script's config file", required=False)
-@click.option('-e', '--env', default='stage', help="The env to be checked", required=False)
+@click.option(
+    "-c",
+    "--config",
+    default=f'{pkg_resources.resource_filename(__name__, "data/pyfxa-versions.json")}',
+    help="The full path to the script's config file",
+    required=False,
+)
+@click.option(
+    "-e", "--env", default="stage", help="The env to be checked", required=False
+)
 def main(config, env):
     """
     main processing
@@ -65,8 +70,8 @@ def main(config, env):
     sites = {}
     config = read_config(config)
     try:
-        for site in config[f'{env}']:
-            sites[f'{site}'] = get_info(site)
+        for site in config[f"{env}"]:
+            sites[f"{site}"] = get_info(site)
     except ValueError:
         die(f"Site {site} doesn't exist in {config}")
 

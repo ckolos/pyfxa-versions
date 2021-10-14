@@ -4,3 +4,4 @@ build
 dist
 lib
 pyfxa_versions.egg-info
+pyfxa_versions/__pycache__/

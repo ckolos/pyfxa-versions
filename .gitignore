@@ -1,4 +1,6 @@
+.mypy_cache
+bin
 build
 dist
-.mypy_cache
+lib
 pyfxa_versions.egg-info

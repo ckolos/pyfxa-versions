@@ -2,11 +2,13 @@
 
 """ fxa-release-status re-written in python """
 
-import json
-from sys import exit
-import requests
 import click
+import json
+import requests
 import pkg_resources
+
+
+from sys import exit
 
 
 def die(msg):
@@ -26,8 +28,8 @@ def read_config(config_file):
             conf = json.load(config)
             config.close()
             return conf
-    except (IOError, ValueError):
-        die(f"Error reading config file {config_file}")
+    except (IOError, ValueError) as e:
+        die(f"Error reading config file {config_file} : {e}")
 
 
 def get_info(site):

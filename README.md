@@ -1,6 +1,6 @@
 # pyfxa-versions
 
-Simple script to query the __version__ endpoint on all the fxa porperties for a given env
+Simple script to query the __version__ endpoint on all the fxa properties for a given env
 
 When working properly, you should get output similar to this:
 
@@ -32,6 +32,7 @@ The script takes the following arguments:
 
 Sample config:
 ```
+# cat fxaversions.json
 {
   "dev": [
     "site1.madeup.com",
